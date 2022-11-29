@@ -18,10 +18,16 @@ string FindingEvenNumbers(int m,  int n)
 {
     string value = String.Empty;
     for(int i = m; i<=n; i++)
+    {
     if (m % 2==0)
     {
+    return value;
+    }
+    else
+    {
     m = m+1;
-    value = m + FindingEvenNumbers(m, n); 
+    value = m + FindingEvenNumbers(m, n);
+    }
     }
     
     return value;
@@ -31,7 +37,7 @@ string FindingEvenNumbers(int m,  int n)
 
 string NaturalNumbers( int m,  int n)
 {
-    if(m<=n) return m + FindingEvenNumbers(m , n-1);
+    if(m<=n) return m + FindingEvenNumbers(m+1 , n);
     else return String.Empty;
     
 }
